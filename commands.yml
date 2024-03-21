@@ -5,3 +5,7 @@ aliases:
   - version $1-
   ranks:
   - commandpanel
+  warps:
+  - commandpanel
+  tiers:
+  - commandpanel

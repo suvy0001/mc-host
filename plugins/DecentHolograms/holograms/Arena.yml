@@ -1,0 +1,18 @@
+location: world:369.500:137.500:270.500
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&6Arena'
+    height: 0.3
+  - content: '&fPvP other players here'
+    height: 0.3
+  - content: '&fItems are protected on death'
+    height: 0.3
+  - content: '&eSafe Zone here!'
+    height: 0.3
+  actions: {}

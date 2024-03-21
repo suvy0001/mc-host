@@ -1,0 +1,49 @@
+panels:
+  warp:
+    perm: default
+    rows: '1'
+    title: Warps
+    empty: light_gray_stained_glass_pane
+    item:
+      '1':
+        material: oak_sapling
+        name: '&eYour Island'
+        lore:
+          - "\_"
+          - '&fTeleport to your island'
+          - "\_"
+          - '&eClick to teleport'
+        commands:
+          - sudo= is
+      '3':
+        material: cherry_sapling
+        name: '&eSpawn'
+        lore:
+          - "\_"
+          - '&fTeleport to spawn'
+          - "\_"
+          - '&eClick to teleport'
+        commands:
+          - sudo= spawn
+      '5':
+        material: skeleton_skull
+        name: '&eArena'
+        lore:
+          - "\_"
+          - '&fTeleport to arena'
+          - "\_"
+          - '&eClick to teleport'
+        commands:
+          - sudo= arena
+      '7':
+        material: player_head
+        name: '&ePlayer Warps'
+        lore:
+          - "\_"
+          - '&fTeleport to other player''s warps'
+          - "\_"
+          - '&eClick to view'
+        commands:
+          - sudo= pw
+    commands:
+      - warps

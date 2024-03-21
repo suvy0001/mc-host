@@ -1,0 +1,4 @@
+command /arena:
+    description: Teleports the player to arena and sets their direction
+    trigger:
+        teleport player to location(369.495, 136, 271.534, "world", -179.9, 41)

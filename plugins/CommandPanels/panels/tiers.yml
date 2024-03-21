@@ -53,6 +53,7 @@ panels:
           commands:
             - console= eco take %cp-player-name% 25000
             - console= lp user %cp-player-name% promote tiers
+            - broadcast= &6&l%cp-player-name% has unlocked Tier I
             - delay= 10 console= cp tier %cp-player-name%
             - refresh
           value2: '%pinataparty_votes_total% ISGREATER'
@@ -259,7 +260,9 @@ panels:
             - 'placeholder= [y1:You already own a higher tier!]'
             - delay= 10 console= cp tier %cp-player-name%
             - refresh
-          material: yellow_stained_glass_pane
+          material: >-
+            cps=
+            eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTdmNTdlN2FhOGRlODY1OTFiYjBiYzUyY2JhMzBhNDlkOTMxYmZhYmJkNDdiYmM4MGJkZDY2MjI1MTM5MjE2MSJ9fX0=
           lore:
             - "\_"
             - •&f Increase island size to 100x100
@@ -287,7 +290,9 @@ panels:
             - •&f Able to have 30 shops
             - "\_"
             - '&dTier Unlocked'
-          material: yellow_stained_glass_pane
+          material: >-
+            cps=
+            eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTdmNTdlN2FhOGRlODY1OTFiYjBiYzUyY2JhMzBhNDlkOTMxYmZhYmJkNDdiYmM4MGJkZDY2MjI1MTM5MjE2MSJ9fX0=
           name: '&b&lTier-II'
         has5:
           value0: '%cp-player-name% HASPERM'
@@ -310,6 +315,7 @@ panels:
           commands:
             - console= eco take %cp-player-name% 50000
             - console= lp user %cp-player-name% promote tiers
+            - broadcast= &6&l%cp-player-name% has unlocked Tier II
             - delay= 10 console= cp tier %cp-player-name%
             - refresh
           value2: '%vault_eco_balance% ISGREATER'
@@ -458,7 +464,9 @@ panels:
             - 'placeholder= [y2:You already own a higher tier!]'
             - delay= 10 console= cp tier %cp-player-name%
             - refresh
-          material: yellow_stained_glass_pane
+          material: >-
+            cps=
+            eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTAwYjI2YTQyZGYxM2M3Njk5NDJiMDE3MjdlMGE0MjA1YmJkNTZjNjFjNWZiZDI1Y2UzNWYzZDc0NzhjNzNiOCJ9fX0=
           lore:
             - "\_"
             - •&f Increase island size to 125x125
@@ -488,7 +496,9 @@ panels:
             - •&f Able to have 2 island homes
             - "\_"
             - '&dTier Unlocked'
-          material: yellow_stained_glass_pane
+          material: >-
+            cps=
+            eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTAwYjI2YTQyZGYxM2M3Njk5NDJiMDE3MjdlMGE0MjA1YmJkNTZjNjFjNWZiZDI1Y2UzNWYzZDc0NzhjNzNiOCJ9fX0=
           name: '&b&lTier-III'
         has5:
           value0: '%cp-player-name% HASPERM'
@@ -512,6 +522,7 @@ panels:
           commands:
             - console= eco take %cp-player-name% 100000
             - console= lp user %cp-player-name% promote tiers
+            - broadcast= &6&l%cp-player-name% has unlocked Tier III
             - delay= 10 console= cp tier %cp-player-name%
             - refresh
           value2: '%vault_eco_balance% ISGREATER'
@@ -662,7 +673,9 @@ panels:
             - 'placeholder= [y3:You already own a higher tier!]'
             - delay= 10 console= cp tier %cp-player-name%
             - refresh
-          material: yellow_stained_glass_pane
+          material: >-
+            cps=
+            eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzQ1ODY0NzYxNzZhMjU2NDczODE4YTE4NDkxNTdlODQ0YzU2Mzg3MjRiY2Y4MzA5ZjBkOWRmMjdjYTk1OTE2MCJ9fX0=
           lore:
             - "\_"
             - •&f Increase island size to 150x150
@@ -692,7 +705,9 @@ panels:
             - •&f Able to have 3 island homes
             - "\_"
             - '&dTier Unlocked'
-          material: yellow_stained_glass_pane
+          material: >-
+            cps=
+            eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzQ1ODY0NzYxNzZhMjU2NDczODE4YTE4NDkxNTdlODQ0YzU2Mzg3MjRiY2Y4MzA5ZjBkOWRmMjdjYTk1OTE2MCJ9fX0=
           name: '&b&lTier-IV'
         has5:
           value0: '%cp-player-name% HASPERM'
@@ -716,6 +731,7 @@ panels:
           commands:
             - console= eco take %cp-player-name% 250000
             - console= lp user %cp-player-name% promote tiers
+            - broadcast= &6&l%cp-player-name% has unlocked Tier IV
             - delay= 10 console= cp tier %cp-player-name%
             - refresh
           value2: '%vault_eco_balance% ISGREATER'
@@ -874,8 +890,10 @@ panels:
             - •&f Able to have 100 shops
             - •&f Able to have 5 island homes
             - "\_"
-            - '&dUnlock Tier'
-          material: yellow_stained_glass_pane
+            - '&dTier Unlocked'
+          material: >-
+            cps=
+            eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzQ4YjQ5ZThiYWZiMWZlZmI0OTUzOWJlNGU4MmNjN2UyYTI0NGJmMDQyODEzNGI5YTgwNTkxYTE3YzFhZTNjYiJ9fX0=
           name: '&b&lTier-V'
         has5:
           value0: '%cp-player-name% HASPERM'
@@ -899,6 +917,7 @@ panels:
           commands:
             - console= eco take %cp-player-name% 500000
             - console= lp user %cp-player-name% promote tiers
+            - broadcast= &6&l%cp-player-name% has unlocked Tier V
             - delay= 10 console= cp tier %cp-player-name%
             - refresh
           value2: '%vault_eco_balance% ISGREATER'
