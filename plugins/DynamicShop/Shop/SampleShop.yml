@@ -6,6 +6,7 @@ Options:
   permission: ''
   page: 2
   currency: Vault
+  tradeUI: '3'
 '0':
   mat: DIRT
   value: 1
