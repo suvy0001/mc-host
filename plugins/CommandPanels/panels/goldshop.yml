@@ -1,7 +1,7 @@
 panels:
   goldshop:
     perm: default
-    rows: 3
+    rows: '4'
     title: Gold Shop | %coinsengine_balance_gold% &0G
     refresh-delay: 25
     pre-load-commands:
@@ -266,3 +266,54 @@ panels:
             - 'placeholder= [x:4]'
             - 'placeholder= [y:Your inventory is full!]'
             - refresh
+      '14':
+        material: saddle
+        lore:
+          - '&fFeeling generous? Spawn a pinata that gives out scrolls now!'
+          - '&bPrice &f500 &6G'
+          - '&dClick to purchase'
+        name: '&b&lSpawn Pinata'
+      '15':
+        material: feather
+        lore:
+          - '&fFly on your island for 7 days!'
+          - '&bPrice &f250 &6G'
+          - '&dClick to purchase'
+        name: '&b&lIsland Fly'
+      '16':
+        material: amethyst_shard
+        lore:
+          - '&fFeeling hyped? '
+          - '&fGive everyone including yourself '
+          - '&fa mcMMO ability boost for 24 hours!'
+          - '&bPrice &f200 &6G'
+          - '&dClick to purchase'
+        name: '&b&lmcMMO Boost'
+      '19':
+        material: >-
+          cps=
+          eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2YxOWJkZmRmYWEzOTk0OWRhMDY2N2Y0YTg5ZjM2NDI2YmE4NjkyYWVmNTFmYzYwNTFhOTgwMjMyN2RhNyJ9fX0=
+        lore:
+          - '&fBuy 12 normal treasure to open for cool cosmetics!'
+          - '&bPrice &f40 &6G'
+          - '&dClick to purchase'
+        name: '&7&lNormal Treasure Chest'
+      '20':
+        material: >-
+          cps=
+          eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzBjNDRkMWE4Y2I0ZDdhY2JmODYxMjJhY2JkOWZjZmFmOWRiZTRhNGVkZjM4OWE4ODdiMjRjZTQzMmEwODQ0YSJ9fX0=
+        lore:
+          - '&fBuy 12 legendary treasure to open for cooler cosmetics!'
+          - '&bPrice &f150 &6G'
+          - '&dClick to purchase'
+        name: '&6&lLegendary Treasure Chest'
+      '21':
+        material: >-
+          cps=
+          eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzNiZGJhZWRkN2Q2NDQ0ZTc5YWE4MjIyZjg5ODEyNDAyMDRjYzNjYzFjOTY1NTExODY4NzYxOGRiOGNlYyJ9fX0=
+        lore:
+          - '&fBuy 12 mythical treasure to open for the coolest cosmetics!'
+          - '&bPrice &f250 &6G'
+          - '&dClick to purchase'
+        name: '&9&lMythical Treasure Chest'
+    empty: light_gray_stained_glass_pane

@@ -15,19 +15,19 @@ regions:
         max: {x: 373, y: 145, z: 274}
         members: {}
         flags: {other-explosion: allow, lava-fire: deny, water-flow: deny, invincible: allow,
-            snow-fall: deny, leaf-decay: deny, crawl: deny, coral-fade: deny, mob-damage: allow,
+            leaf-decay: deny, snow-fall: deny, crawl: deny, coral-fade: deny, mob-damage: allow,
             ravager-grief: deny, mushroom-growth: deny, use-anvil: allow, lightning: allow,
-            ice-form: deny, wither-damage: deny, pose: deny, enderman-grief: deny,
-            mob-spawning: deny, crop-growth: deny, natural-hunger-drain: allow, creeper-explosion: allow,
-            vine-growth: deny, playersit: deny, snow-melt: deny, ghast-fireball: deny,
-            entity-item-frame-destroy: deny, deny-message: §cYou can't %what% in arena,
-            natural-health-regen: allow, time-lock: '6000', frosted-ice-form: deny,
-            mycelium-spread: deny, block-trampling: deny, ice-melt: deny, weather-lock: clear,
-            fire-spread: deny, enderdragon-block-damage: deny, sculk-growth: deny,
-            snowman-trails: deny, rock-growth: deny, entity-painting-destroy: deny,
-            sit: deny, use-dripleaf: deny, pistons: deny, item-drop: deny, soil-dry: deny,
-            exp-drops: allow, copper-fade: deny, fall-damage: deny, item-pickup: allow,
-            item-frame-rotation: deny, frosted-ice-melt: deny, lava-flow: deny, grass-growth: deny}
+            wither-damage: deny, ice-form: deny, pose: deny, enderman-grief: deny,
+            mob-spawning: deny, natural-hunger-drain: allow, crop-growth: deny, creeper-explosion: allow,
+            vine-growth: deny, playersit: deny, snow-melt: deny, entity-item-frame-destroy: deny,
+            ghast-fireball: deny, natural-health-regen: allow, time-lock: '6000',
+            deny-message: §cYou can't %what% in arena, frosted-ice-form: deny, mycelium-spread: deny,
+            ice-melt: deny, block-trampling: deny, weather-lock: clear, fire-spread: deny,
+            enderdragon-block-damage: deny, sculk-growth: deny, snowman-trails: deny,
+            rock-growth: deny, entity-painting-destroy: deny, sit: deny, use-dripleaf: deny,
+            pistons: deny, item-drop: deny, soil-dry: deny, exp-drops: allow, copper-fade: deny,
+            fall-damage: deny, item-frame-rotation: deny, item-pickup: allow, frosted-ice-melt: deny,
+            lava-flow: deny, grass-growth: deny}
         owners: {}
         type: cuboid
         priority: 1
@@ -40,8 +40,8 @@ regions:
             lava-fire: deny
             water-flow: deny
             invincible: allow
-            snow-fall: deny
             leaf-decay: deny
+            snow-fall: deny
             firework-damage: deny
             crawl: deny
             coral-fade: deny
@@ -50,27 +50,27 @@ regions:
             mushroom-growth: deny
             use-anvil: deny
             lightning: deny
-            ice-form: deny
             wither-damage: deny
+            ice-form: deny
             chorus-fruit-teleport: allow
             pose: deny
             enderman-grief: deny
-            mob-spawning: deny
-            crop-growth: deny
+            mob-spawning: allow
             natural-hunger-drain: allow
+            crop-growth: deny
             creeper-explosion: deny
             vine-growth: deny
             playersit: deny
             snow-melt: deny
-            ghast-fireball: deny
             entity-item-frame-destroy: deny
-            deny-message: §cYou can't %what% at spawn
+            ghast-fireball: deny
             natural-health-regen: allow
             time-lock: '6000'
+            deny-message: §cYou can't %what% at spawn
             frosted-ice-form: deny
             mycelium-spread: deny
-            block-trampling: deny
             ice-melt: deny
+            block-trampling: deny
             chest-access: allow
             weather-lock: clear
             fire-spread: deny
@@ -107,8 +107,8 @@ regions:
             exp-drops: deny
             copper-fade: deny
             fall-damage: deny
-            item-pickup: allow
             item-frame-rotation: deny
+            item-pickup: allow
             frosted-ice-melt: deny
             lava-flow: deny
             grass-growth: deny
@@ -119,20 +119,20 @@ regions:
         min: {x: 208, y: -64, z: 93}
         max: {x: 552, y: 319, z: 372}
         members: {}
-        flags: {other-explosion: allow, lava-fire: deny, water-flow: deny, snow-fall: deny,
-            leaf-decay: deny, firework-damage: allow, crawl: deny, coral-fade: deny,
+        flags: {other-explosion: allow, lava-fire: deny, water-flow: deny, leaf-decay: deny,
+            snow-fall: deny, firework-damage: allow, crawl: deny, coral-fade: deny,
             mob-damage: allow, ravager-grief: deny, mushroom-growth: deny, use-anvil: allow,
-            lightning: allow, ice-form: deny, wither-damage: deny, chorus-fruit-teleport: deny,
-            pose: deny, enderman-grief: deny, pvp: allow, mob-spawning: deny, crop-growth: deny,
-            natural-hunger-drain: allow, creeper-explosion: allow, vine-growth: deny,
-            playersit: deny, snow-melt: deny, ghast-fireball: deny, entity-item-frame-destroy: deny,
-            deny-message: §cYou can't %what% in arena, natural-health-regen: allow,
-            time-lock: '6000', frosted-ice-form: deny, mycelium-spread: deny, block-trampling: deny,
-            ice-melt: deny, weather-lock: clear, fire-spread: deny, enderdragon-block-damage: deny,
+            lightning: allow, wither-damage: deny, ice-form: deny, chorus-fruit-teleport: deny,
+            pose: deny, enderman-grief: deny, pvp: allow, mob-spawning: deny, natural-hunger-drain: allow,
+            crop-growth: deny, creeper-explosion: allow, vine-growth: deny, playersit: deny,
+            snow-melt: deny, entity-item-frame-destroy: deny, ghast-fireball: deny,
+            natural-health-regen: allow, time-lock: '6000', deny-message: §cYou can't
+                %what% in arena, frosted-ice-form: deny, mycelium-spread: deny, ice-melt: deny,
+            block-trampling: deny, weather-lock: clear, fire-spread: deny, enderdragon-block-damage: deny,
             sculk-growth: deny, snowman-trails: allow, rock-growth: deny, entity-painting-destroy: deny,
             sit: deny, use-dripleaf: allow, pistons: deny, enderpearl: allow, item-drop: deny,
             soil-dry: deny, exp-drops: allow, copper-fade: deny, fall-damage: allow,
-            item-pickup: allow, item-frame-rotation: deny, frosted-ice-melt: deny,
+            item-frame-rotation: deny, item-pickup: allow, frosted-ice-melt: deny,
             lava-flow: deny, grass-growth: deny}
         owners: {}
         type: cuboid
@@ -141,7 +141,7 @@ regions:
         members: {}
         flags: {time-lock: '6000', item-drop: deny, creeper-explosion: deny, build: deny,
             mob-damage: allow, leaf-decay: deny, block-trampling: deny, chest-access: allow,
-            weather-lock: clear, mob-spawning: deny, fire-spread: deny}
+            mob-spawning: deny, weather-lock: clear, fire-spread: deny}
         owners: {}
         type: global
         priority: 0
