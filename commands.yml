@@ -9,3 +9,5 @@ aliases:
   - commandpanel
   tiers:
   - commandpanel
+  goldshop:
+  - commandpanel

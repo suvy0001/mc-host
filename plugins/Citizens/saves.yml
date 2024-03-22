@@ -1,6 +1,6 @@
 # Citizens NPC Storage
 
-last-created-npc-id: 335
+last-created-npc-id: 336
 npc:
   '17':
     metadata:
@@ -52,11 +52,11 @@ npc:
         bodyYaw: -95.34363
         world: bskyblock_world
         x: '68.4866'
-        y: '-1.31162886521E7'
+        y: '-1.32842490552E7'
         z: '60.4762'
         yaw: '-95.3436'
         pitch: '0.0'
-    traitnames: lookclose,owner,type,mounttrait,rotationtrait,villagertrait,scoreboardtrait,spawned,hologramtrait,location,profession
+    traitnames: location,scoreboardtrait,spawned,lookclose,mounttrait,owner,villagertrait,hologramtrait,type,profession,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -112,11 +112,11 @@ npc:
         bodyYaw: -59.99996
         world: bskyblock_world
         x: '59.5426'
-        y: '-1.31162896521E7'
+        y: '-1.32842500552E7'
         z: '39.7704'
         yaw: '-60.0'
         pitch: '0.0'
-    traitnames: lookclose,owner,type,mounttrait,rotationtrait,villagertrait,scoreboardtrait,spawned,hologramtrait,location,profession
+    traitnames: location,spawned,scoreboardtrait,lookclose,mounttrait,owner,hologramtrait,villagertrait,type,profession,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -172,11 +172,11 @@ npc:
         bodyYaw: -10.060944
         world: bskyblock_world
         x: '70.5181'
-        y: '-1.31162896521E7'
+        y: '-1.32842500552E7'
         z: '52.4907'
         yaw: '-10.0609'
         pitch: '0.0'
-    traitnames: lookclose,owner,type,mounttrait,rotationtrait,villagertrait,scoreboardtrait,spawned,hologramtrait,location,profession
+    traitnames: location,scoreboardtrait,spawned,lookclose,mounttrait,owner,hologramtrait,villagertrait,type,profession,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -232,11 +232,11 @@ npc:
         bodyYaw: -52.328403
         world: bskyblock_world
         x: '61.5002'
-        y: '-1.31162896521E7'
+        y: '-1.32842500552E7'
         z: '39.6652'
         yaw: '-52.3284'
         pitch: '0.0'
-    traitnames: lookclose,owner,type,mounttrait,rotationtrait,villagertrait,scoreboardtrait,spawned,hologramtrait,location,profession
+    traitnames: location,scoreboardtrait,spawned,lookclose,mounttrait,owner,villagertrait,hologramtrait,type,profession,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -292,11 +292,11 @@ npc:
         bodyYaw: 39.625526
         world: bskyblock_world
         x: '43.5196'
-        y: '-1.31162896521E7'
+        y: '-1.32842500552E7'
         z: '53.528'
         yaw: '39.6255'
         pitch: '0.0'
-    traitnames: lookclose,owner,type,mounttrait,rotationtrait,villagertrait,scoreboardtrait,spawned,hologramtrait,location,profession
+    traitnames: location,spawned,scoreboardtrait,lookclose,mounttrait,owner,hologramtrait,villagertrait,type,profession,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -342,17 +342,17 @@ npc:
               bottom: '0.0'
       spawned: true
       location:
-        bodyYaw: 68.62714
+        bodyYaw: 127.69147
         world: world
         x: '68.4658'
         y: '99.0'
         z: '60.4998'
-        yaw: '68.6271'
+        yaw: '127.6915'
         pitch: '0.0'
       owner:
         uuid: 4e652eb0-f42e-34fb-8424-539c2da8221f
       type: VILLAGER
-    traitnames: lookclose,owner,type,mounttrait,rotationtrait,scoreboardtrait,spawned,hologramtrait,location,profession
+    traitnames: location,scoreboardtrait,spawned,lookclose,mounttrait,owner,hologramtrait,type,profession,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -398,12 +398,12 @@ npc:
               bottom: '0.0'
       spawned: true
       location:
-        bodyYaw: -58.61135
+        bodyYaw: -3.61174
         world: world
         x: '59.4984'
         y: '98.0'
         z: '39.4666'
-        yaw: '-58.6114'
+        yaw: '-3.6117'
         pitch: '0.0'
       owner:
         uuid: 4e652eb0-f42e-34fb-8424-539c2da8221f
@@ -426,7 +426,7 @@ npc:
             delay: 0
             cost: '-1.0'
             experienceCost: -1
-    traitnames: lookclose,owner,type,mounttrait,rotationtrait,scoreboardtrait,spawned,commandtrait,hologramtrait,location,profession
+    traitnames: location,spawned,scoreboardtrait,lookclose,mounttrait,owner,hologramtrait,commandtrait,type,profession,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -472,12 +472,12 @@ npc:
               bottom: '0.0'
       spawned: true
       location:
-        bodyYaw: -52.557182
+        bodyYaw: 9.275497
         world: world
         x: '61.6002'
         y: '98.0'
         z: '39.4127'
-        yaw: '-58.2648'
+        yaw: '9.2755'
         pitch: '0.0'
       owner:
         uuid: 4e652eb0-f42e-34fb-8424-539c2da8221f
@@ -500,7 +500,7 @@ npc:
             delay: 0
             cost: '-1.0'
             experienceCost: -1
-    traitnames: lookclose,owner,type,mounttrait,rotationtrait,scoreboardtrait,spawned,commandtrait,hologramtrait,location,profession
+    traitnames: location,spawned,scoreboardtrait,lookclose,mounttrait,owner,hologramtrait,commandtrait,type,profession,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -546,17 +546,17 @@ npc:
               bottom: '0.0'
       spawned: true
       location:
-        bodyYaw: 34.424446
+        bodyYaw: 85.321365
         world: world
         x: '70.4895'
         y: '98.0'
         z: '52.4584'
-        yaw: '34.4244'
+        yaw: '85.3214'
         pitch: '0.0'
       owner:
         uuid: 4e652eb0-f42e-34fb-8424-539c2da8221f
       type: VILLAGER
-    traitnames: lookclose,owner,type,mounttrait,rotationtrait,scoreboardtrait,spawned,hologramtrait,location,profession
+    traitnames: location,scoreboardtrait,spawned,lookclose,mounttrait,owner,hologramtrait,type,profession,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -603,17 +603,35 @@ npc:
               bottom: '0.0'
       spawned: true
       location:
-        bodyYaw: -91.095535
+        bodyYaw: -85.34918
         world: world
         x: '43.5179'
         y: '98.0'
         z: '53.4931'
-        yaw: '-91.0955'
+        yaw: '-85.3492'
         pitch: '0.0'
       owner:
         uuid: 4e652eb0-f42e-34fb-8424-539c2da8221f
       type: VILLAGER
-    traitnames: lookclose,owner,type,mounttrait,rotationtrait,scoreboardtrait,spawned,hologramtrait,location,profession
+      commandtrait:
+        cost: -1.0
+        executionMode: LINEAR
+        experienceCost: -1
+        hideErrorMessages: false
+        persistSequence: false
+        commands:
+          '0':
+            command: goldshop
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+            cost: '-1.0'
+            experienceCost: -1
+    traitnames: location,scoreboardtrait,spawned,lookclose,mounttrait,owner,hologramtrait,commandtrait,type,profession,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -659,12 +677,12 @@ npc:
               bottom: '0.0'
       spawned: true
       location:
-        bodyYaw: 66.9155
+        bodyYaw: -37.930378
         world: world
         x: '81.5424'
         y: '97.0'
         z: '54.5303'
-        yaw: '66.9155'
+        yaw: '-55.5116'
         pitch: '0.0'
       owner:
         uuid: 4e652eb0-f42e-34fb-8424-539c2da8221f
@@ -687,7 +705,7 @@ npc:
             delay: 0
             cost: '-1.0'
             experienceCost: -1
-    traitnames: lookclose,owner,type,mounttrait,rotationtrait,scoreboardtrait,commandtrait,spawned,hologramtrait,location,profession
+    traitnames: location,spawned,scoreboardtrait,lookclose,mounttrait,owner,hologramtrait,commandtrait,type,profession,rotationtrait
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
