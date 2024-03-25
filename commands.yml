@@ -11,3 +11,5 @@ aliases:
   - commandpanel
   goldshop:
   - commandpanel
+  sell:
+  - economyshopgui-premium:sellall $1-

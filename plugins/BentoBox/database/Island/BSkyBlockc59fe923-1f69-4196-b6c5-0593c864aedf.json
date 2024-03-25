@@ -133,7 +133,8 @@
     "CONTAINER": 500,
     "BARREL": 500,
     "COLLECT_POWDERED_SNOW": 500,
-    "CARTOGRAPHY": 500
+    "CARTOGRAPHY": 500,
+    "ISLAND_FLY_PROTECTION": 500
   },
   "history": [],
   "spawnPoint": {

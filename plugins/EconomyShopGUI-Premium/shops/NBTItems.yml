@@ -1,0 +1,34 @@
+pages:
+  page1:
+    gui-rows: 2
+    items:
+      '1':
+        material: POTION
+        displayname: '&d&lPotion with the effects from a &6God Apple'
+        name: '&d&lGod potion'
+        buy: 9165
+        sell: 2280
+        NBTData: '{CustomPotionEffects:[{Id:10,Amplifier:2,Duration:400},{Id:22,Amplifier:4,Duration:2400},{Id:11,Amplifier:1,Duration:6000},{Id:12,Amplifier:1,Duration:6000}]}'
+      '2':
+        material: SHIELD
+        name: '&7&lColored shield'
+        buy: 32
+        sell: -1
+        enchantments:
+        - UNBREAKING:3
+        lore:
+        - '&fThis shield has a base color'
+        - '&fof black and a red gradient'
+        - '&fwith in the middle a'
+        - '&flight gray creeper charge.'
+        NBTData: '{BlockEntityTag:{Base:15,Patterns:[{Pattern:"gra",Color:14},{Pattern:"cre",Color:7}]}}'
+      '3':
+        material: NETHERITE_PICKAXE
+        name: '&6&lUnbreakable Netherite pickaxe'
+        lore:
+        - '&aThis pickaxe also has efficiency 15.'
+        buy: 1850000
+        sell: 999000
+        enchantments:
+        - EFFICIENCY:15
+        NBTData: '{Unbreakable:1b}'

@@ -1,0 +1,794 @@
+config-version: 2.0.2.0
+
+language-file: lang-en.yml
+
+
+
+locale: en-US
+
+currency-format: "#,##0.00"
+
+
+
+
+update-checking: true
+
+
+
+storage-type: SQLite
+
+mysql:
+  database: database
+  host: localhost
+  port: 3306
+  username: root
+  password: password
+  table-prefix: "ESGUIP_"
+  pool:
+    maximum-lifetime: 1800000
+    idle-timeout: 600000
+    maximum-pool-size: 10
+    minimum-idle: 10
+
+
+
+debug: true
+
+use-nms: true
+
+
+
+transaction-log: true
+
+
+
+
+dynamic-pricing: false
+
+dynamic-pricing-save-period: 1h
+
+dynamic-pricing-sellPriceScaling: 25
+
+dynamic-pricing-buyPriceScaling: 35
+
+dynamic-pricing-max-stock: 50000
+
+
+
+enable-disabled-worlds: false
+
+disabled-worlds-per-command:
+
+  shop:
+    - "testbuilding"
+
+  sellall:
+    - "randompvp"
+
+  editshop:
+    - "boss-fights"
+    - "Survival-Spawn"
+
+
+
+
+economy-provider: VAULT
+
+
+currency-formats:
+  player-points:
+    singular: "Point"
+    plural: "Points"
+    friendly: "Points"
+  vault:
+    singular: "%currency-symbol%"
+    plural: "%currency-symbol%"
+    friendly: "money"
+  item:
+    singular: "%item-name%"
+    plural: "%item-name%s"
+    friendly: "%item-name%s"
+  gems-economy:Example:
+    singular: "Example"
+    plural: "Examples"
+    friendly: "Examples"
+  levels:
+    singular: "%translations-levels-currency-name-singular%"
+    plural: "%translations-levels-currency-name-plural%"
+    friendly: "%translations-levels-currency-name-plural%"
+  item:Skys:
+    singular: 'Sky Crystal'
+    plural: 'Sky Crystals'
+    friendly: 'Sky Crystals'
+
+
+
+spawner-provider: AUTO
+
+
+
+enable-discordsrv-hook: false
+
+
+discordsrv-transactions:
+  channel: shop-transactions
+  raw: ""
+  embed:
+    color: "0x006FFF"
+    title: ""
+    description: ""
+    author:
+      title: "New shop transaction"
+      imageURL: "https://api.creepernation.net/avatar/%player_name%"
+    fields:
+      1:
+        title: "Player"
+        message: "```%player_displayname%```"
+      2:
+        title: "Mode"
+        message: "```%bought/sold%```"
+      3:
+        title: "Amount"
+        message: "```%amount%```"
+      4:
+        title: "Product(s)"
+        message: "```%items%```"
+      5:
+        title: "Price"
+        message: "```%price%```"
+    footer:
+      title: ""
+      imageURL: ""
+
+
+
+log-player-transactions: true
+
+on-screen-title: true
+
+drop-remaining-items-on-ground: false
+
+sell-shulker-boxes: true
+
+banned-gamemodes:
+  - CREATIVE
+  - SPECTATOR
+
+use-item-name: true
+
+sound-effects:
+  volume: 1
+  pitch: 1
+  purchase-item: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  sell-item: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  open-main-menu: "BLOCK_ENDER_CHEST_OPEN"
+  close-main-menu: "UI_TOAST_OUT"
+  open-shop: "UI_BUTTON_CLICK"
+  select-shop-item: "UI_BUTTON_CLICK"
+  change-shop-page: "ITEM_BOOK_PAGE_TURN"
+  use-back-button: "UI_TOAST_OUT"
+  select-item-amount: "UI_BUTTON_CLICK"
+
+
+
+
+
+main-menu:
+  gui-rows: 6
+  fill-item:
+    material: "GRAY_STAINED_GLASS_PANE"
+    name: " "
+    enable: true
+
+resize-gui-for-bedrock: true
+
+default-search-mode: BY_NAME
+
+
+
+
+main-menu-nav-bar:
+  enabled: true
+  items:
+    1:
+      material: player_head
+      skullowner: "%player_name%"
+      name: "%player_displayname%"
+      lore:
+        - "%translations-money%: &c%player_balance%"
+    2:
+      material: air
+    3:
+      material: air
+    4:
+      material: air
+    5:
+      material: air
+    6:
+      material: air
+    7:
+      material: air
+    8:
+      material: air
+    9:
+      material: barrier
+      name: "%translations-cancel%"
+      action: BACK
+
+shops-nav-bar:
+  enabled: true
+  items:
+    1:
+      material: player_head
+      skullowner: "%player_name%"
+      name: "%player_displayname%"
+      lore:
+        - "%translations-money%: &c%player_balance%"
+    2:
+      material: air
+    3:
+      material: air
+    4:
+      material: PLAYER_HEAD
+      name: '%translations-previous-page%'
+      skull-texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjZkYWI3MjcxZjRmZjA0ZDU0NDAyMTkwNjdhMTA5YjVjMGMxZDFlMDFlYzYwMmMwMDIwNDc2ZjdlYjYxMjE4MCJ9fX0='
+      action: PAGE_BACK
+      paginated:
+        enabled: true
+        orElse:
+          material: AIR
+    5:
+      material: NETHER_STAR
+      name: '%translations-current-page%'
+    6:
+      material: PLAYER_HEAD
+      name: '%translations-next-page%'
+      skull-texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGFhMTg3ZmVkZTg4ZGUwMDJjYmQ5MzA1NzVlYjdiYTQ4ZDNiMWEwNmQ5NjFiZGM1MzU4MDA3NTBhZjc2NDkyNiJ9fX0='
+      action: PAGE_NEXT
+      paginated:
+        enabled: true
+        orElse:
+          material: AIR
+    7:
+      material: air
+    8:
+      material: air
+    9:
+      material: barrier
+      name: "%translations-back%"
+      action: BACK
+
+transaction-screens-nav-bar:
+  enabled: true
+  items:
+    1:
+      material: player_head
+      skullowner: "%player_name%"
+      name: "%player_displayname%"
+      lore:
+        - "%translations-money%: &c%player_balance%"
+    2:
+      material: air
+    3:
+      material: air
+    4:
+      material: air
+    5:
+      material: REDSTONE_TORCH
+      name: '&c&lToggle buying/selling'
+      action: TOGGLE_MODE
+      onlyEnableForGeyserPlayers: true
+    6:
+      material: air
+    7:
+      material: air
+    8:
+      material: air
+    9:
+      material: barrier
+      name: "%translations-back%"
+      action: BACK
+
+sellgui-nav-bar:
+  enabled: true
+  items:
+    1:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: " "
+    2:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: " "
+    3:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: " "
+    4:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: " "
+    5:
+      material: NETHER_STAR
+      name: "&a&lSellGUI"
+      lore:
+        - "&6Drop items in to sell"
+        - "&6upon closing, everything will be sold."
+        - "&eItems that couldn't be sold"
+        - "&ewill be given back to you."
+    6:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: " "
+    7:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: " "
+    8:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: " "
+    9:
+      material: "GRAY_STAINED_GLASS_PANE"
+      name: " "
+
+shop-search-nav-bar:
+  enabled: true
+  items:
+    1:
+      material: player_head
+      skullowner: "%player_name%"
+      name: "%player_displayname%"
+      lore:
+        - "%translations-money%: &c%player_balance%"
+    2:
+      material: air
+    3:
+      material: air
+    4:
+      material: PLAYER_HEAD
+      name: '%translations-previous-page%'
+      skull-texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjZkYWI3MjcxZjRmZjA0ZDU0NDAyMTkwNjdhMTA5YjVjMGMxZDFlMDFlYzYwMmMwMDIwNDc2ZjdlYjYxMjE4MCJ9fX0='
+      action: PAGE_BACK
+      paginated:
+        enabled: true
+        orElse:
+          material: AIR
+    5:
+      material: NETHER_STAR
+      name: '%translations-current-page%'
+      action: CHANGE_SEARCH_MODE
+      lore:
+        - "%translations-shopsearch-change-search-method%"
+    6:
+      material: PLAYER_HEAD
+      name: '%translations-next-page%'
+      skull-texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGFhMTg3ZmVkZTg4ZGUwMDJjYmQ5MzA1NzVlYjdiYTQ4ZDNiMWEwNmQ5NjFiZGM1MzU4MDA3NTBhZjc2NDkyNiJ9fX0='
+      action: PAGE_NEXT
+      paginated:
+        enabled: true
+        orElse:
+          material: AIR
+    7:
+      material: air
+    8:
+      material: air
+    9:
+      material: barrier
+      name: "%translations-back%"
+      action: BACK
+
+
+
+allow-renamed-items: true
+
+allow-lore-items: true
+
+lore-arrangement:
+  - 'special-lore'
+  - 'buy-prices'
+  - 'sell-prices'
+  - 'decoration-lore'
+  - 'item-lore'
+  - 'item-stock'
+  - 'sell-limit'
+  - 'admin-lore'
+
+display-lore-layout:
+  special-lore:
+    missing-item-permission:
+      with-rank: "%translations-missing-required-item-permissions-rank%"
+      without-rank: "%translations-missing-required-item-permissions%"
+    seasonal-pricing: "%translations-item-seasonal-price%"
+    already-purchased: "%translations-already-purchased-item%"
+  buy-prices:
+    normal:
+    - "%translations-left-click-buy%"
+    disabled:
+    - "%translations-item-cannot-be-bought%"
+    undefined:
+    - ""
+    discounted:
+    - "%translations-discounted-buy-price%"
+    seasonal:
+    - "%translations-seasonal-buy-price%"
+  sell-prices:
+    normal:
+    - "%translations-right-click-sell%"
+    disabled:
+    - "%translations-item-cannot-be-sold%"
+    undefined:
+    - ""
+    multiplied:
+    - "%translations-multiplied-sell-price%"
+    seasonal:
+    - "%translations-seasonal-sell-price%"
+    sell-all:
+    - ""
+  item-stock:
+    current-stock: "%translations-current-item-stock%"
+    out-of-stock: "%translations-item-out-of-stock%"
+    restocking: "%translations-restocking-item%"
+  sell-limit:
+    current-limit: "%translations-sell-limit%"
+    limit-reached: "%translations-sell-limit-reached%"
+    restocking: "%translations-sell-limit-restocking%"
+  decoration-lore:
+    extra-lore:
+    - "%translations-decoration-lore%"
+    extra-buy-lore:
+    - "%translations-decoration-lore-buy%"
+    extra-sell-all-lore:
+    - "%translations-decoration-lore-sell-all%"
+    extra-sell-lore:
+    - "%translations-decoration-lore-sell%"
+  admin-lore:
+    item-index: "%translations-item-location-in-shop%"
+    item-editor: "%translations-shift-click-item-editor%"
+
+bought-items-lore: true
+
+allow-unsafe-enchants: true
+
+allow-illegal-stacks: true
+
+shift-right-click-sell-all: true
+
+item-stock-lore: true
+
+show-group-displayname: true
+
+sold-items-ignored-NBTtags:
+  - "RepairCost"
+  - 'SkullOwner::Id'
+
+max-shop-pages: 50
+
+
+
+buy-screen:
+  menu-size: 5
+  items:
+    1:
+      material: magenta_stained_glass_pane
+      name: "%translations-min-thirty-two%"
+      stack-size: 32
+      action: REMOVE32
+      slot: 19
+
+    2:
+      material: magenta_stained_glass_pane
+      name: "%translations-min-sixteen%"
+      stack-size: 16
+      action: REMOVE16
+      slot: 20
+
+    3:
+      material: magenta_stained_glass_pane
+      name: "%translations-min-one%"
+      action: REMOVE1
+      slot: 21
+
+    4:
+      material: light_blue_stained_glass_pane
+      name: "%translations-plus-one%"
+      action: ADD1
+      slot: 23
+
+    5:
+      material: light_blue_stained_glass_pane
+      name: "%translations-plus-sixteen%"
+      stack-size: 16
+      action: ADD16
+      slot: 24
+
+    6:
+      material: light_blue_stained_glass_pane
+      name: "%translations-plus-thirty-two%"
+      stack-size: 32
+      action: ADD32
+      slot: 25
+
+    7: # Confirm buy
+      material: paper
+      name: "%translations-buy%"
+      lore:
+      - "%translations-transaction-screen-total-price%"
+      action: CONFIRM_TRANSACTION
+      slot: 13
+      type: CONFIRM
+
+    8: # Selected shop item
+      slot: 22
+      type: SELECTED_ITEM
+
+    9: # Open buy-stacks screen
+      material: chest
+      name: "%translations-buy-stacks%"
+      slot: 31
+      action: OPEN_BUY_STACKS
+
+sell-screen:
+  menu-size: 5
+  items:
+    1:
+      material: magenta_stained_glass_pane
+      name: "%translations-min-thirty-two%"
+      stack-size: 32
+      action: REMOVE32
+      slot: 19
+
+    2:
+      material: magenta_stained_glass_pane
+      name: "%translations-min-sixteen%"
+      stack-size: 16
+      action: REMOVE16
+      slot: 20
+
+    3:
+      material: magenta_stained_glass_pane
+      name: "%translations-min-one%"
+      action: REMOVE1
+      slot: 21
+
+    4:
+      material: light_blue_stained_glass_pane
+      name: "%translations-plus-one%"
+      action: ADD1
+      slot: 23
+
+    5:
+      material: light_blue_stained_glass_pane
+      name: "%translations-plus-sixteen%"
+      stack-size: 16
+      action: ADD16
+      slot: 24
+
+    6:
+      material: light_blue_stained_glass_pane
+      name: "%translations-plus-thirty-two%"
+      stack-size: 32
+      action: ADD32
+      slot: 25
+
+    7: # Confirm sell
+      material: paper
+      name: "%translations-sell%"
+      lore:
+      - "%translations-transaction-screen-total-price%"
+      action: CONFIRM_TRANSACTION
+      slot: 13
+      type: CONFIRM
+
+    8: # Selected shop item
+      slot: 22
+      type: SELECTED_ITEM
+
+    9: # Sell all items
+      material: emerald
+      name: "%translations-sell-all%"
+      slot: 31
+      action: SELL_ALL
+
+buy-stacks-screen:
+  menu-size: 5
+  items:
+    1:
+      material: magenta_stained_glass
+      name: "%translations-min-thirty-two%"
+      stack-size: 32
+      action: REMOVE32
+      slot: 19
+
+    2:
+      material: magenta_stained_glass
+      name: "%translations-min-sixteen%"
+      stack-size: 16
+      action: REMOVE16
+      slot: 20
+
+    3:
+      material: magenta_stained_glass
+      name: "%translations-min-one%"
+      action: REMOVE1
+      slot: 21
+
+    4:
+      material: light_blue_stained_glass
+      name: "%translations-plus-one%"
+      action: ADD1
+      slot: 23
+
+    5:
+      material: light_blue_stained_glass
+      name: "%translations-plus-sixteen%"
+      stack-size: 16
+      action: ADD16
+      slot: 24
+
+    6:
+      material: light_blue_stained_glass
+      name: "%translations-plus-thirty-two%"
+      stack-size: 32
+      action: ADD32
+      slot: 25
+
+    7: # Confirm buy
+      material: paper
+      name: "%translations-buy%"
+      lore:
+      - "%translations-transaction-screen-total-price%"
+      action: CONFIRM_TRANSACTION
+      slot: 13
+      type: CONFIRM
+
+    8: # Selected shop item
+      slot: 22
+      type: SELECTED_ITEM
+
+
+enable-seasonal-pricing: false
+
+season-price-modifiers:
+  Spring:
+    Dyes:
+      all: "-50%"
+    Food:
+      all: "-25%"
+    Blocks:
+      page1:items:6: "+50%"
+    Spawners:
+      page1:items:26: "-25%"
+      page1:items:10: "-25%"
+      page1:item:25: "-25%"
+      page1:items:8: "-25%"
+    Farming:
+      page1:items:15: "+30%"
+  Summer:
+    Farming:
+      all: "+35%"
+  Fall:
+    Spawners:
+      page1:items:20: "-50%"
+      page1:items:13: "-50%"
+      page1:items:31: "-40%"
+      page1:items:7: "-25%"
+    Farming:
+      page1:items:24: "-75%"
+      page1:items:7: "-75%"
+    Mobs:
+      page1:items:18: "+25%"
+  Winter:
+    Blocks:
+      page1:items:6: "+50%"
+    Spawners:
+      page1:items:35: "-50%"
+    Farming:
+      all: "-20%"
+      page1:items:15: "+45%"
+
+seasonal-lore:
+  enabled: true
+  Summer:
+    icon: '&e&l☀'
+  Spring:
+    icon: '&6&l☘'
+  Fall:
+    icon: '&c☔'
+  Winter:
+    icon: '&b&l❄'
+
+
+
+enable-discounts: false
+
+discounts:
+  Blocks:
+    vip: 20
+    gold: 5
+  Farming:
+    vip: 15
+  Redstone:
+    diamond: 30
+  all: # Players will get 2.5% discount on any item inside any section they buy items from
+    coal: 2.5
+
+
+
+enable-sell-multipliers: false
+
+sell-multipliers:
+  all:
+    vip: 20
+    gold: 2.5
+    coal: 1
+  Spawners:
+    gold: 12.5
+
+
+
+override-sell-command: true
+
+old-sellall-command: false
+
+commands:
+
+  sellall: true
+
+  shop: true
+
+  sreload: true
+
+  editshop: true
+
+  sellgui: true
+
+  shopgive: true
+
+shop-commands:
+  - "shop"
+  - "market"
+
+sellall-commands:
+  - "sellall"
+
+sellgui-commands:
+  - "sellgui"
+
+
+
+disableBackButtonWithShopSectionCommand: false
+
+
+
+enable-joinmessage: false
+
+
+
+enable-levelevent: false
+
+leveleventmoney5/10/15: 10
+
+leveleventmoney20/25/30: 50
+
+
+
+
+enable-spawnerbreak: true
+
+enable-spawnerplace: true
+
+allow-spawner-type-change: false
+
+player-placed-spawners-drop-exp: false
+
+only-mine-plugin-spawners: false
+
+spawner-break-tools:
+
+  1:
+    material: DIAMOND_PICKAXE
+    enchantments:
+    - "SILK_TOUCH"
+  2:
+    material: IRON_PICKAXE
+    enchantments:
+    - "SILK_TOUCH"
+    - "EFFICIENCY:2" # This means that the pickaxe needs ATLEAST efficiency 2 for a spawner to be mined
+  3:
+    material: NETHERITE_PICKAXE
+    enchantments:
+      - "SILK_TOUCH"

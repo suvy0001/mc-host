@@ -17,3 +17,8 @@ Options:
   value: 1.5
   median: 10000
   stock: 10000
+'2':
+  mat: BLAZE_ROD
+  value: 1.0
+  median: 10000
+  stock: 10000

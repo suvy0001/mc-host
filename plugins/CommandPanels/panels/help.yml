@@ -9,7 +9,7 @@ panels:
         material: >-
           cps=
           eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Y3Y2RlZWZjNmQzN2ZlY2FiNjc2YzU4NGJmNjIwODMyYWFhYzg1Mzc1ZTlmY2JmZjI3MzcyNDkyZDY5ZiJ9fX0=
-        name: '&eAuction House Commands'
+        name: '&eAuction House commands'
         lore:
           - "\_"
           - '&e/ah &fView the auction house/buy items'
@@ -23,6 +23,9 @@ panels:
         lore:
           - "\_"
           - '&f&e/warps &fView the various type of warps'
+          - '&f&e/spawn &fTeleport to spawn'
+          - '&f&e/arena &fTeleport to arena'
+          - '&f&e/pw &fView the other player warps'
           - "\_"
           - '&fClick to open'
         commands:
@@ -31,12 +34,13 @@ panels:
         material: >-
           cps=
           eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTQ5YTIwZjE2NDk2NGFhZTU3MWM1OWM5MmM4OGQyNTQ2YjI2OTIzZGM1MWQ0Y2JlNzBhMjg0ODAwM2ZhOGQ4YiJ9fX0=
-        name: '&eSocial Commands'
+        name: '&eSocial commands'
         lore:
           - "\_"
           - '&e/pm &fPrivate message any player'
           - '&e/tpa &fSend a teleport request to any player'
           - '&e/tpaccept &fAccept a teleport request from any player'
+          - '&e/ignore &fTo ignore a player in chat'
           - >-
             &e/mail send &fSend a mail to any player (useful for offline
             players)
@@ -53,5 +57,90 @@ panels:
           - '&ffor magic dusts/experience bottles'
           - '&e/alchemist &fExchange 2xces or magic dusts for '
           - '&f1 ces or magic dust with a higher chance'
+      '4':
+        material: >-
+          cps=
+          eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGY0ZmNkOTU5OGExZmQzOWMyOGY1MDgwOWU0Y2U4YTEzMjJhZDQ4YTlhYmQ4YzIzZjIxMTg4Y2UwYTgyODhlNCJ9fX0=
+        name: '&eShop'
+        lore:
+          - "\_"
+          - '&e/shop &fPurchase/Sell items in the shop'
+          - '&e/ds qsell &fOpen the quicksell menu'
+      '5':
+        material: >-
+          cps=
+          eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2EzYzhjNmQzYWFhOTYzNjNkNGJlZjI1NzhmMTAyNDc4MWVhMTRlOWQ4NWE5ZGNmYzA5MzU4NDdhNmZiNWM4ZCJ9fX0=
+        name: '&eChest Shop'
+        lore:
+          - "\_"
+          - '&fCreate a chestshop by punching a chest with an item'
+          - '&fand entering selling price in chat'
+          - '&e/qs buy &fTo set a chestshop to buying mode'
+          - '&e/qs sell &fTo set a chestshop to selling mode'
+          - '&e/qs fetchmessage &fTo show unread shop messages'
+          - '&e/qs remove &fTo remove the chestshop'
+      '6':
+        material: clock
+        name: '&eGeneral commands'
+        lore:
+          - "\_"
+          - '&fRight click with a shulker box in hand to preview'
+          - '&fand entering selling price in chat'
+          - '&e/trade &fTo trade with other players'
+          - '&e/ranks &fTo view rank perks or upgrade your rank'
+          - '&e/tiers &fTo view tier perks or upgrade your tier'
+          - '&e/vote &fTo vote for the server and get special rewards'
+      '7':
+        material: oak_sapling
+        name: '&eIsland commands'
+        lore:
+          - "\_"
+          - '&e/is &fTo teleport to your island/create new island for first time'
+          - '&e/is reset &fReset your island and start over'
+          - '&e/is settings &fConfigure island settings'
+          - '&e/is setname &fSet a name for your island'
+          - '&e/is resetname &fReset your island name'
+          - '&e/is ban &fBan a player from your island'
+          - '&e/is unban &fUnban a player from your island'
+          - '&e/is expel &fExpel a player from your island'
+          - '&e/is challenges &fView island challenges'
+          - '&e/is level &fCalculate your island level'
+          - >-
+            &e/is value &fCalculate value of a block/block in your hand (for
+            island level)
+          - '&e/is generator &fView your island generator'
+          - '&e/is top &fShow the top 10 islands'
+          - '&e/is chat &fToggle island chat'
+          - '&e/is teamchat &fToggle island team chat'
+          - '&e/is biomes &fView/change your island biome'
+          - '&e/is fly &fFly on your island (purchase flight time in /goldshop)'
+      '8':
+        material: amethyst_shard
+        name: '&emcMMO commands'
+        lore:
+          - "\_"
+          - '&e/stats &fView your mcMMO statistics/skills'
+          - >-
+            &e/<skill> &f/axes, /archery etc... to view information on mcMMO
+            skills
+          - '&e/mctop &fView the top 10 players with the most mcMMO power'
+          - '&e/mcability &fToggle ability activation with right click'
+          - '&e/party create <name> <password> &fTo create a mcMMO party'
+          - '&e/party join <name> <password> &fTo join a mcMMO party'
+          - '&e/party quit &fTo leave your current party'
+          - '&e/party chat &fTo chat in the party chat'
+          - '&e/party invite &fSend a player party invite'
+          - '&e/party accept &fAccept party invite'
+          - '&e/party teleport <player> &fTeleport to a member of the party'
+      '9':
+        material: diamond_pickaxe
+        name: '&eImportant commands'
+        lore:
+          - "\_"
+          - '&e/goldshop &fView the goldshop'
+          - '&e/silvershop &fView the silvershop'
+          - '&e/ranks &fView/upgrade ranks'
+          - '&e/tiers &fView/upgrade tiers'
+          - '&e/vote &fVote for the server to get special rewards'
     commands:
       - help
