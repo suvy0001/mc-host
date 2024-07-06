@@ -441,6 +441,8 @@ addons:
     enabled: false
     # What version of this expansion do you want to download/use?
     version: "latest"
+    # Should trusted players be treated like the owner of the claim?
+    trusted-players: true
     # Should the warp be created when a claim is created?
     # Should they only be able to set warps in lands? If disabled, they can set warps in their land or wilderness.
     only-land: true
@@ -654,7 +656,18 @@ addons:
     - "Category: [category]"
     - "Rates: [rates]"
     - "Rates Average: [rates_average] ([rates_stars])"
-
+    # To prevent warps from appearing in the map, you can use a placeholder condition.
+    # This will only work if you have the PlaceholderAPI plugin installed.
+    # In this example, this will only make warps appear if the warp is not locked.
+    placeholder-condition:
+      # Should the condition be checked?
+      enabled: false
+      # The placeholder to check
+      placeholder: "%pw_warp_name_%warp%_locked%"
+      # Condition can only be: ==, >, <
+      condition: "=="
+      # The value that the condition needs to be.
+      value: "false"
   bluemap:
     # Do you want to enable bluemap support?
     # You need bluemap installed for this to work!
@@ -665,6 +678,18 @@ addons:
     layer-name: "PlayerWarps"
     # Should the layer be hidden by default?
     default-hidden: false
+    # To prevent warps from appearing in the map, you can use a placeholder condition.
+    # This will only work if you have the PlaceholderAPI plugin installed.
+    # In this example, this will only make warps appear if the warp is not locked.
+    placeholder-condition:
+      # Should the condition be checked?
+      enabled: false
+      # The placeholder to check
+      placeholder: "%pw_warp_name_%warp%_locked%"
+      # Condition can only be: ==, >, <
+      condition: "=="
+      # The value that the condition needs to be.
+      value: "false"
 
   pl3xmap:
     # Do you want to enable pl3xmap/squaremap support?
@@ -695,3 +720,106 @@ addons:
     icon-link: "https://cdn.olziedev.com/playerwarps/images/warp_icon.png"
     # Should the layer be hidden by default?
     default-hidden: false
+    # To prevent warps from appearing in the map, you can use a placeholder condition.
+    # This will only work if you have the PlaceholderAPI plugin installed.
+    # In this example, this will only make warps appear if the warp is not locked.
+    placeholder-condition:
+      # Should the condition be checked?
+      enabled: false
+      # The placeholder to check
+      placeholder: "%pw_warp_name_%warp%_locked%"
+      # Condition can only be: ==, >, <
+      condition: "=="
+      # The value that the condition needs to be.
+      value: "false"
+
+# Here you can choose to be able to hook into other economy's and configure them to your liking.
+currencies:
+  vault:
+    # Do you want to enable the vault currency?
+    enabled: true
+    # What version of this expansion do you want to download/use?
+    version: "latest"
+    # The prefix of the price variable, this is how you want the variable to show when using the vault currency.
+    name: "vault"
+    # The prefix of the price variable, this is how you want the variable to show when using the money currency.
+    prefix: "$%price%"
+    # How should the plugin interact with vault, by default the plugin uses player names due to some limitations with economy plugins.
+    # If you're having issues with this expansion, changing this to use false may resolve this problem.
+    use-name: true
+    # The banks expansions support for this currency, if you want to enable expansions for this currency, then set this to true.
+    # This is used to be able to take money from the bank account of the player if they dont have any money in the main currency.
+    banks:
+      bankplus:
+        # Do you want to enable the bankplus expansion for this currency?
+        enabled: true
+        # What is the default bank player auctions should use? If this is not set, it will use the default bank.
+        bank: ""
+
+  tokenmanager:
+    # Do you want to enable the TokenManager currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: "latest"
+    # The prefix of the price variable, this is how you want the variable to show when using the token manager currency.
+    prefix: "%price% tokens"
+  playerpoints:
+    # Do you want to enable the PlayerPoints currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: "latest"
+    # The prefix of the price variable, this is how you want the variable to show when using the player points currency.
+    prefix: "%price% points"
+  beasttoken:
+    # Do you want to enable the BeastToken currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: "latest"
+    # The prefix of the price variable, this is how you want the variable to show when using the beast token currency.
+    prefix: "%price% tokens"
+  gemseconomy:
+    # Do you want to enable the GemsEconomy currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: "latest"
+    # The prefix of the price variable, this is how you want the variable to show when using the gems economy currency.
+    prefix: "%price% gems"
+  ecobits:
+    # Do you want to enable the EcoBits currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: "latest"
+    # The prefix of the price variable, this is how you want the variable to show when using the eco bits currency.
+    prefixes:
+      currency_name: "%price% bits"
+  coinsengine:
+    # Do you want to enable the CoinsEngine currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: "latest"
+    # The prefix of the price variable, this is how you want the variable to show when using the coins engine currency.
+    prefixes:
+      currency_name: "%price% coins"
+  rivalcredits:
+    # Do you want to enable the RivalCredits currency?
+    enabled: false
+    # What version of this expansion do you want to download/use?
+    version: "latest"
+    # The prefix of the price variable, this is how you want the variable to show when using the rival credits currency.
+    prefix: "%price% credits"
+  item:
+    # Do you want to enable the Item currency?
+    enabled: true
+    # What version of this expansion do you want to download/use?
+    version: "latest"
+    # The prefix of the price variable, this is how you want the variable to show when using the item currency.
+    prefix: "%price% %item%"
+  xp:
+    # Do you want to enable the XP currency?
+    enabled: true
+    # What version of this expansion do you want to download/use?
+    version: "latest"
+    # The prefix of the price variable, this is how you want the variable to show when using the xp currency.
+    prefix: "%price% XP"
+    # Should the plugin take levels or xp points?
+    strictly-use-levels: false

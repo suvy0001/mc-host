@@ -40,9 +40,7 @@ lang:
   warp-remove-confirmation: "%prefix% &aTem certeza que deseja remover este warp? FaÃ§a de novo, se desejar."
   warp-set: "%prefix% &aWarp &d%name% &adefinida com sucesso!"
   reloaded: "%prefix% &aTodas as configuraÃ§Ãµes foram recarregadas com sucesso!"
-  money-taken: "%prefix% &a$%price% foi retirado da sua conta bancÃ¡ria."
-  items-taken-set: "%prefix% &aOs diamantes foram retirados do seu inventÃ¡rio."
-  items-taken-teleport: "%prefix% &aOs diamantes foram retirados do seu inventÃ¡rio."
+  currency-taken: "%prefix% &a%price% foi retirado da sua conta bancÃ¡ria."
   teleporting-dont-move: "%prefix% &aTeleportando para &d%warp_display%&a em &d%time%&a segundos!"
   desc-set-success: "%prefix% &aDescriÃ§Ã£o definida com sucesso &d%desc%&a para a warp &d%warp_display%"
   desc-remove-success: "%prefix% &aA descriÃ§Ã£o do warp &d%warp_display% foi removida com sucesso."
@@ -108,8 +106,7 @@ lang:
   dbexec-successful: "%prefix% &aSuccessfully updated &d%count%&a rows. &aPlease execute &d/%cmd% reload&a to update changes."
   removed-rating: "%prefix% &aSuccessfully removed rating for &d%warp_display%&a!"
   warp-info: "%prefix% &bWarp Information for &d%warp_display%&b:\n%prefix% &bOwner: &d%owner%\n%prefix% &bLocation: &d%world%, %location%\n%prefix% &bVisits: &d%visits%\n%prefix% &bDescription:\n%prefix% &d%desc%\n%prefix% &bTime Created: &d%date%\n%prefix% &bCategory: &d%category%\n%prefix% &bRates: &d%rates%\n%prefix% &bRates Average: &d%rates_average% &7(&e%rates_stars%&7)\n%prefix% &bTeleport Cost: &d%cost%"
-  refunded-items: "%prefix% &aYou have been refunded your items."
-  refunded-money: "%prefix% &aYou have been refunded your money."
+  refunded-currency: "%prefix% &aYou have been refunded."
   
   # the help menu for a player
   # The variable %cmd% is any command from the config.yml :)
@@ -196,11 +193,8 @@ lang:
     money-not-enough-teleport: "%prefix% &cVocÃª nÃ£o tem $%price% para teleportar para esta warp!"
     money-not-enough-reset: "%prefix% &cvocÃª nÃ£o tem $%price% para resetar sua warp!"
     money-not-enough-rename: "%prefix% &cvocÃª nÃ£o tem $%price% para renomear sua warp!"
-    items-not-enough-set: "%prefix% &cVocÃª nÃ£o tem diamantes para definir esta warp!"
-    items-not-enough-teleport: "%prefix% &cVocÃª nÃ£o tem diamantes para definir esta warp!"
     money-not-enough-set: "%prefix% &cvocÃª nÃ£o tem $%price% to set this warp!"
     money-not-enough-sponsor: "%prefix% &cvocÃª nÃ£o tem $%price% para divulgar esta warp!"
-    item-not-enough-sponsor: "%prefix% &cVocÃª nÃ£o tem o %item% suficiente para divulgar esta warp!"
     moved-while-teleporting: "%prefix% &cCancelado, VocÃª se moveu!"
     desc-no-desc-gui: "&cNenhuma"
     desc-no-desc: "%prefix% &c%warp_display% nÃ£o tem descriÃ§Ã£o!"

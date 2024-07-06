@@ -40,9 +40,7 @@ lang:
   warp-remove-confirmation: "%prefix% &cВы уверены, что хотите удалить варп %warp_display%? Повторите, чтобы удалить."
   warp-set: "%prefix% &aВарп успешно установлен!"
   reloaded: "%prefix% &aВсе конфигурации успешно перезагружены!"
-  money-taken: "%prefix% &a$%price% было снято с вашего игрового счета."
-  items-taken-set: "%prefix% &aАлмазы были изъяты из вашего инвентаря."
-  items-taken-teleport: "%prefix% &aАлмазы были изъяты из вашего инвентаря."
+  currency-taken: "%prefix% &a%price% было снято с вашего игрового счета."
   teleporting-dont-move: "%prefix% &aТелепортация на варп &6%warp_display%&a произойдёт через &6%time%&a секунд!"
   desc-set-success: "%prefix% &aОписание &6%desc%&a было успешно установлено для варпа &6%warp_display%"
   desc-remove-success: "%prefix% &aОписание варпа &6%warp_display% было успешно удалено"
@@ -106,8 +104,7 @@ lang:
   dbexec-successful: "%prefix% &aSuccessfully updated &d%count%&a rows. &aPlease execute &d/%cmd% reload&a to update changes."
   removed-rating: "%prefix% &aSuccessfully removed rating for &d%warp_display%&a!"
   warp-info: "%prefix% &bWarp Information for &d%warp_display%&b:\n%prefix% &bOwner: &d%owner%\n%prefix% &bLocation: &d%world%, %location%\n%prefix% &bVisits: &d%visits%\n%prefix% &bDescription:\n%prefix% &d%desc%\n%prefix% &bTime Created: &d%date%\n%prefix% &bCategory: &d%category%\n%prefix% &bRates: &d%rates%\n%prefix% &bRates Average: &d%rates_average% &7(&e%rates_stars%&7)\n%prefix% &bTeleport Cost: &d%cost%"
-  refunded-items: "%prefix% &aYou have been refunded your items."
-  refunded-money: "%prefix% &aYou have been refunded your money."
+  refunded-currency: "%prefix% &aYou have been refunded."
   
   # the help menu for a player
   # The variable %cmd% is any command from the config.yml :)
@@ -192,11 +189,8 @@ lang:
     money-not-enough-teleport: "%prefix% &cУ вас нет $%price% для телепортации в этот варп!"
     money-not-enough-reset: "%prefix% &cУ вас нет $%price% для переустановки варпа!"
     money-not-enough-rename: "%prefix% &cУ вас нет $%price%, чтобы переименовать ваш варп!"
-    items-not-enough-set: "%prefix% &cУ вас нет алмазов, чтобы установить этот варп!"
-    items-not-enough-teleport: "%prefix% &cУ вас нет алмазов, чтобы телепортироваться в этот варп!"
     money-not-enough-set: "%prefix% &cУ вас нет $%price% для установки этого варпа!"
     money-not-enough-sponsor: "%prefix% &cУ вас нет $%price%, чтобы спонсировать этот варп!"
-    item-not-enough-sponsor: "%prefix% &cУ вас недостаточно %item%, чтобы спонсировать этот варп!"
     moved-while-teleporting: "%prefix% &cОтменено, вы переехали!"
     desc-no-desc-gui: "&cНикто"
     desc-no-desc: "%prefix% &c%warp_display% не имеет описания!"

@@ -132,6 +132,7 @@ alchemist:
   trade-cancelled: "&cTrade cancelled."
   cannot-afford: "&cYou cannot afford this transaction!"
   exceeds-max-level: "&cYour combined level exceeds maximum enchantment level!"
+  take-currency: "&c- %price%"
 
 gkits:
   no-permission: "&eYou don't have permissions to use &e%gkit%&6 kit."
@@ -217,3 +218,5 @@ chances:
 
 destroy:
   book-failed: "&cEnchantment was unsuccessful!"
+
+# 50360TK80UER0NNGEOAW4FLOUUC

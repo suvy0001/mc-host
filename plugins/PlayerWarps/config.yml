@@ -10,11 +10,14 @@
 # list: []
 
 # DO NOT TOUCH THIS!
-config-version: 216
+config-version: 219
 
 settings:
   # What language do you want the plugin to read? The list langs are in the lang/ folder.
   lang: "en_US"
+  # Should the plugin try and attempt to detect what language the player is using on their client?
+  # If it could not find one, it'll hse the default language.
+  attempt-detect-lang: true
   # Very useful to tell if there are any memory leaks or if the author needs
   # information.
   # Current debug levels are:
@@ -64,8 +67,8 @@ settings:
     SERVER: "Server Warps"
     # Only un-comment these out if you wish to take advantage of the last visits purge.
     # This will sort the warps out on the amount of visits since the purge.
-#    PURGED_HIGHEST_VISITS: "Current Highest Visits"
-#    PURGED_LOWEST_VISITS: "Current Lowest Visits"
+  #    PURGED_HIGHEST_VISITS: "Current Highest Visits"
+  #    PURGED_LOWEST_VISITS: "Current Lowest Visits"
 
   # How often should the random sort actually randomize?
   order-random-time: 86400
@@ -212,8 +215,9 @@ settings:
 
     # Remember, you can always add command aliases, just please use this.
     # This example is for the set command, but you can add any command.
-    # set-command-aliases:
-    #   - "create"
+    custom-command-aliases:
+      set-command-aliases:
+      - "create"
 
     desc-command-syntax: "%prefix% &b/%label% %args-0% set/remove <warp> <desc>"
     remove-command-syntax: "%prefix% &b/%label% %args-0% <warp>"
@@ -365,17 +369,24 @@ settings:
     renting:
       # Should renting warps be enabled?
       enabled: false
-      # What is the price they have to pay x amount of days? If they don't have this in their bank, the warp will be removed.
-      renting-price: 500
-      # Here you can choose specific ranks that have the renting price, if you have not put a rank there the max will be above.
-      # WARNING This will not work if you're using the default Bukkit Permissions system due to vault not supporting groups.
-      # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
-      # Depending on your permissions plugin this may be really performance heavy.
-      renting-ranks-price: {}
-#        # The rank VIP's rent will cost  $1000.
-#        vip: 1000
-#        # The rank MVP doesn't have rent.
-#        MVP: -1
+      economy:
+        # What is the price they have to pay x amount of days? If they don't have this in their bank, the warp will be removed.
+        price: 500
+        # Here you can choose specific ranks that have the renting price, if you have not put a rank there the max will be above.
+        # WARNING This will not work if you're using the default Bukkit Permissions system due to vault not supporting groups.
+        # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
+        # Depending on your permissions plugin this may be really performance heavy.
+        rank-prices: {}
+      #        # The rank VIP's rent will cost  $1000.
+      #        vip: 1000
+      #        # The rank MVP doesn't have rent.
+      #        MVP: -1
+      # What are the currencies that the player can pay with, if empty it will just use Vault.
+      # YOU cannot use the item currency for renting!
+      # If your plugin supports internal currencies, you can separate the internal currency using ":". For example. EcoBits:Warps
+      # currencies: ["vault"]
+      currencies:
+      - "vault"
 
       # Every x days do they have to pay?
       time: 1
@@ -415,24 +426,28 @@ settings:
       # This is how much they will need to set a warp, otherwise if they don't have that it will not set the warp and send the message
       # in lang folder. Make sure you have an economy plugin and vault supports that economy plugin!
       # Set this to -1 to disable.
-      set-price: 500
+      price: 500
       # Here you can choose specific ranks that the price they need to pay, if you have not put a rank there the payment will be the payment will be above.
       # WARNING This will not work if you're using the default Bukkit Permissions system due to vault not supporting groups.
       # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
       # Depending on your permissions plugin this may be really performance heavy.
-      set-ranks-price: {}
-#        # The rank MVP does not need to pay.
-#        MVP: -1
-#        # The rank VIP only needs to pay $1.
-#        vip: 1
+      rank-prices: {}
+      #        # The rank MVP does not need to pay.
+      #        MVP: -1
+      #        # The rank VIP only needs to pay $1.
+      #        vip: 1
 
-      items:
+      # What are the currencies that the player can pay with, if empty it will just use Vault.
+      # If you want to use the item currency, make sure you have the item in the item section below.
+      # If your plugin supports internal currencies, you can separate the internal currency using ":". For example. EcoBits:Market
+      # currencies: ["vault", "item"]
+      currencies:
+      - "vault"
+      item:
         name: ""
         material: "DIAMOND"
         data: 0
         lore: []
-        # set the amount to -1 to disable
-        amount: -1
 
       # If you want players to be able to set a certain amount of warps for free above they actually start to pay for creating them
       # Set this to -1 to disable or set this the amount of warps they can set for free.
@@ -442,10 +457,10 @@ settings:
       # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
       # Depending on your permissions plugin this may be really performance heavy.
       free-ranks-limit: {}
-#        # The rank MVP will not pay until they set 5 warps.
-#        MVP: 5
-#        # The rank VIP only needs to pay after 1 warp.
-#        vip: 1
+    #        # The rank MVP will not pay until they set 5 warps.
+    #        MVP: 5
+    #        # The rank VIP only needs to pay after 1 warp.
+    #        vip: 1
 
     sign:
       # Should players be able to set warps from signs?
@@ -595,6 +610,12 @@ settings:
     confirmation-expire-time: 10
     # Should we enable the unsafe-block feature, meaning that a player can set a warp to trap players and kill them innocently.
     unsafe-block: true
+    # If the above option is true, how often should the plugin check if the warp is unsafe? This is in seconds.
+    # The plugin does try it best, the plugin checks after re-setting a location, AFTER teleporting to a warp.
+    # This is also just an extra check to make sure the warp is safe.
+    # Please be warned, checking is a very intensive task (ESPECIALLY FOR SPIGOT USERS), so please do not set this to a high umber.
+    # Any lag caused by this is no one's fault but your own.
+    safe-periodic-check: -1
     # This is how many blocks down it checks.
     blocks-down-check: 1
     # If the blocks-down-check hits the minimum y level, should it automatically mark the warp as unsafe?
@@ -652,10 +673,10 @@ settings:
     # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
     # Depending on your permissions plugin this may be really performance heavy.
     teleport-ranks-wait: {}
-#       # The rank MVP doesn't have a wait
-#       MVP: -1
-#       # The rank VIP only waits for 1 second.
-#       vip: 1
+    #       # The rank MVP doesn't have a wait
+    #       MVP: -1
+    #       # The rank VIP only waits for 1 second.
+    #       vip: 1
     # What is the cooldown in seconds for teleporting to a warp? Set this to -1 to disable.
     cooldown: 5
     # Should the cooldown have specific warps listed?
@@ -717,30 +738,37 @@ settings:
       # This is how much they will need to teleport to a warp, otherwise if they don't have that, they won't teleport to the warp and send the message
       # in lang folder. Make sure you have an economy plugin and vault supports that economy plugin!
       # Set this to -1 to disable.
-      teleport-price: 5
+      price: 5
       # Here you can choose specific ranks that the price they need to pay, if you have not put a rank there the payment will be the payment will be above.
       # WARNING This will not work if you're using the default Bukkit Permissions system due to vault not supporting groups.
       # This can also cause freezing in the menu if you're using LuckPerms even with caching, not sure why but that's the current case.
       # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
       # Depending on your permissions plugin this may be really performance heavy.
-      teleport-ranks-price: {}
-#        # The rank MVP does not need to pay.
-#        MVP: -1
-#        # The rank VIP only needs to pay $1.
-#        vip: 1
+      rank-prices: {}
+      #        # The rank MVP does not need to pay.
+      #        MVP: -1
+      #        # The rank VIP only needs to pay $1.
+      #        vip: 1
 
-      items:
+      # What are the currencies that the player can pay with, if empty it will just use Vault.
+      # If you want to use the item currency, make sure you have the item in the item section below.
+      # If your plugin supports internal currencies, you can separate the internal currency using ":". For example. EcoBits:Market
+      # currencies: ["vault", "item"]
+      currencies:
+      - "vault"
+
+      item:
         name: ""
         material: "DIAMOND"
         data: 0
         lore: []
-        # set the amount to -1 to disable
-        amount: -1
 
       # Should the money be given to the owner of the warp?
       give-to-owner: true
       # If the above option is true, what is the amount that should be taken away from the cut when someone teleports. Set to -1 to ignore splitting a cut.
       percentage-cut: -1
+      # If the above option is not -1, do you want the percentage cut only to work for set costs by players? /pw cost
+      only-set-cost: false
       # Should the owner pay when teleporting to their warp?
       owner-pay: false
       # Should the owner still be charged even if you have give-to-owner true and owner-pay true?
@@ -758,10 +786,10 @@ settings:
       # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
       # Depending on your permissions plugin this may be really performance heavy.
       max-ranks-cost: {}
-#        # The rank MVP doesn't have a limit.
-#        MVP: -1
-#        # The rank VIP can only set a cost of $1000.
-#        vip: 1000
+      #        # The rank MVP doesn't have a limit.
+      #        MVP: -1
+      #        # The rank VIP can only set a cost of $1000.
+      #        vip: 1000
 
       # if you have the cost command enabled, do you want to be able to limit your players to set the minimum warp costs? Set to -1 for no minumum.
       min-cost: -1
@@ -770,10 +798,10 @@ settings:
       # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
       # Depending on your permissions plugin this may be really performance heavy.
       min-ranks-cost: {}
-#        # The rank MVP doesn't have a minimum.
-#        MVP: -1
-#        # The rank VIP can only set a min cost of $1000.
-#        vip: 1000
+    #        # The rank MVP doesn't have a minimum.
+    #        MVP: -1
+    #        # The rank VIP can only set a min cost of $1000.
+    #        vip: 1000
 
     sign:
       # Should players be able to make signs to teleport to warps?
@@ -874,12 +902,60 @@ settings:
         commands: []
 
   reset:
-    # What is the cost for someone to re-set their warps' location. Set to -1 to disable.
-    reset-price: -1
+    economy:
+      # What is the cost for someone to re-set their warps' location. Set to -1 to disable.
+      price: -1
+      # Here you can choose specific ranks that the price they need to pay, if you have not put a rank there the payment will be the payment will be above.
+      # WARNING This will not work if you're using the default Bukkit Permissions system due to vault not supporting groups.
+      # This can also cause freezing in the menu if you're using LuckPerms even with caching, not sure why but that's the current case.
+      # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
+      # Depending on your permissions plugin this may be really performance heavy.
+      rank-prices: {}
+      #        # The rank MVP does not need to pay.
+      #        MVP: -1
+      #        # The rank VIP only needs to pay $1.
+      #        vip: 1
+
+      # What are the currencies that the player can pay with, if empty it will just use Vault.
+      # If you want to use the item currency, make sure you have the item in the item section below.
+      # If your plugin supports internal currencies, you can separate the internal currency using ":". For example. EcoBits:Market
+      # currencies: ["vault", "item"]
+      currencies:
+      - "vault"
+
+      item:
+        name: ""
+        material: "DIAMOND"
+        data: 0
+        lore: []
 
   rename:
-    # What is the cost for someone to rename their warp. Set to -1 to disable.
-    rename-price: -1
+    economy:
+      # This is how much they will need to rename a warp. Set to -1 to disable.
+      price: -1
+      # Here you can choose specific ranks that the price they need to pay, if you have not put a rank there the payment will be the payment will be above.
+      # WARNING This will not work if you're using the default Bukkit Permissions system due to vault not supporting groups.
+      # This can also cause freezing in the menu if you're using LuckPerms even with caching, not sure why but that's the current case.
+      # Please list the ranks from the highest to the lowest, as if your groups inherit each other than it'll find the first one on the list instead of the highest one.
+      # Depending on your permissions plugin this may be really performance heavy.
+      rank-prices: {}
+      #        # The rank MVP does not need to pay.
+      #        MVP: -1
+      #        # The rank VIP only needs to pay $1.
+      #        vip: 1
+
+      # What are the currencies that the player can pay with, if empty it will just use Vault.
+      # If you want to use the item currency, make sure you have the item in the item section below.
+      # If your plugin supports internal currencies, you can separate the internal currency using ":". For example. EcoBits:Market
+      # currencies: ["vault", "item"]
+      currencies:
+      - "vault"
+
+      item:
+        name: ""
+        material: "DIAMOND"
+        data: 0
+        lore: []
 
   sponsor:
     # What is the cooldown in seconds the player can have until have another sponsor ? (Time starts when the sponsor time expires) Set to -1 to disable
@@ -919,9 +995,15 @@ settings:
   dangerous-ignore-update-inventory: false
   # This is to change the priority of the chat wait action, if you have any issues with the chat wait action, you may want to change this from HIGHEST to LOWEST.
   wait-chat-event-priority: "HIGHEST"
+  # If this is true and you're using paper, it will use the paper event for the chat wait action. This is recommended to be enabled.
+  # If you're having issues with the chat wait action, you may want to disable this as your main chat plugin might still be using the bukkit event.
+  use-paper-event: true
   # If you are using a software that is not Spigot and has forge, you may want to enable this to fix some issues with the plugin like modded items missing NBT tags.
   # If this is enabled, you need ProtocolLib installed.
   use-modded-serialization: false
   # When handling items, should it remove public bukkit values? If you have are issues with items losing lore etc set this to false.
   # Some plugins may remove the item from a menu if it is false, if youre having this issue set it to true.
   remove-item-pbv: true
+  # Should the plugin attempt to parse legacy JSON messages? Only set this to true if you're using JSON messages in the plugin.
+  # JSON messages are no longer supported, a better alternative is MiniMessage.
+  use-legacy-json-message: false

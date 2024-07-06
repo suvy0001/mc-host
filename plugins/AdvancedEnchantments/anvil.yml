@@ -11,8 +11,6 @@ use-repair-cost: true
 allow-illegal-vanilla-enchant-combinations: false
 allow-illegal-custom-enchant-combinations: false
 
-# If this is enabled, you can apply enchants to enchanted books with items.
-allow-backwards-enchant-books: false
 
 # The maximum levels vanilla enchants can be combined up to.
 levels:
@@ -62,3 +60,7 @@ levels:
   Impaling: 5
   Loyalty: 3
   Riptide: 3
+allow-backwards-enchant-books: false
+
+
+# 50360TK80UER0NNGEOAW4FLOUUC

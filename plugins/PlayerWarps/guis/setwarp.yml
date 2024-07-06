@@ -21,74 +21,74 @@ setwarp:
   clickable-items:
     name:
       name: "&bSet name"
-      material: OAK_SIGN
+      material: "OAK_SIGN"
       data: 0
       lore:
-        - "&dClick&b to set the name of the warp."
-        - " "
-        - "&7Current name: &b[warp_display]"
+      - "&dClick&b to set the name of the warp."
+      - " "
+      - "&7Current name: &b[warp_display]"
       slot: 4
       amount: 1
       glowing: false
       sign:
         lines:
-          - "%search%"
-          - "----------------"
-          - "Please enter"
-          - "a name."
+        - "%search%"
+        - "----------------"
+        - "Please enter"
+        - "a name."
     description:
       name: "&bSet description"
-      material: PAPER
+      material: "PAPER"
       data: 0
       lore:
-        - "&dClick&b to set the description of the warp."
-        - " "
-        - "&7Current description: &b[desc]"
+      - "&dClick&b to set the description of the warp."
+      - " "
+      - "&7Current description: &b[desc]"
       slot: 11
       amount: 1
       glowing: false
       message: "&bPlease enter a description for the warp."
     cost:
       name: "&bSet cost"
-      material: GOLD_INGOT
+      material: "GOLD_INGOT"
       data: 0
       lore:
-        - "&dClick&b to set the cost of the warp."
-        - " "
-        - "&7Current cost: &b[cost_set]"
+      - "&dClick&b to set the cost of the warp."
+      - " "
+      - "&7Current cost: &b[cost_set]"
       slot: 13
       amount: 1
       glowing: false
       sign:
         lines:
-          - "%search%"
-          - "----------------"
-          - "Please enter"
-          - "a price."
+        - "%search%"
+        - "----------------"
+        - "Please enter"
+        - "a price."
     category:
       name: "&bSet category"
-      material: BOOK
+      material: "BOOK"
       data: 0
       lore:
-        - "&dLeft Click&b to add a category to the warp."
-        - "&dRight Click&b to remove a category from the warp."
-        - " "
-        - "&7Current categories: &b[category]"
+      - "&dLeft Click&b to add a category to the warp."
+      - "&dRight Click&b to remove a category from the warp."
+      - " "
+      - "&7Current categories: &b[category]"
       slot: 15
       amount: 1
       glowing: false
       sign:
         lines:
-          - "%search%"
-          - "----------------"
-          - "Please enter"
-          - "a category."
+        - "%search%"
+        - "----------------"
+        - "Please enter"
+        - "a category."
     set:
       name: "&bSet warp"
-      material: LIME_WOOL
+      material: "LIME_WOOL"
       data: 5
       lore:
-        - "&dClick&b to set the warp."
+      - "&dClick&b to set the warp."
       slot: 22
       amount: 1
       glowing: false
@@ -99,14 +99,22 @@ setwarp:
       # This is the name of the item.
       name: " "
       # This is the item material.
-      material: LIGHT_BLUE_STAINED_GLASS_PANE
+      material: "LIGHT_BLUE_STAINED_GLASS_PANE"
       # This is the data item
       data: 3
       # You can add lores!
       # example of what you can do:
       # lore:
       #   - "&bThis is a pane."
-      slot: [0, 2, 6, 8, 18, 20, 24, 26]
+      slot:
+      - 0
+      - 2
+      - 6
+      - 8
+      - 18
+      - 20
+      - 24
+      - 26
       # What is the stack amount?
       amount: 1
       # commands that will be executed on click.
@@ -120,7 +128,17 @@ setwarp:
       #owner: Glass - Skull owner
     2:
       name: " "
-      material: MAGENTA_STAINED_GLASS_PANE
+      material: "MAGENTA_STAINED_GLASS_PANE"
       data: 2
-      slot: [1, 3, 5, 7, 9, 17, 19, 21, 23, 25]
+      slot:
+      - 1
+      - 3
+      - 5
+      - 7
+      - 9
+      - 17
+      - 19
+      - 21
+      - 23
+      - 25
       amount: 1

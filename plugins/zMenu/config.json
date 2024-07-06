@@ -30,5 +30,6 @@
   "enableCacheItemStack": true,
   "enableCooldownClick": true,
   "cooldownClickMilliseconds": 100,
-  "cachePlaceholderAPI": 500
+  "cachePlaceholderAPI": 500,
+  "enableCachePlaceholderAPI": false
 }

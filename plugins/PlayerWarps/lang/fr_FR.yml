@@ -40,9 +40,7 @@ lang:
   warp-remove-confirmation: "%prefix% &aÊtes-vous sûr de vouloir supprimer ce warp ? Exécutez la commande de nouveau pour la confirmer."
   warp-set: "%prefix% &aCréation du warp &d%name%&a avec succès !"
   reloaded: "%prefix% &aRechargement des fichiers de configuration réussi !"
-  money-taken: "%prefix% &a$%price% ont été prélevés de votre compte en banque."
-  items-taken-set: "%prefix% &aDes diamands ont été prélevéé de votre inventaire."
-  items-taken-teleport: "%prefix% &aDes diamands ont été prélevés de votre inventaire."
+  currency-taken: "%prefix% &a%price% ont été prélevés de votre compte en banque."
   teleporting-dont-move: "%prefix% &aTéléportation au warp &d%warp_display%&a dans &d%time%&a secondes !"
   desc-set-success: "%prefix% &aDescription définie avec succès pour &d%desc%&a, pour le warp &d%warp_display%"
   desc-remove-success: "%prefix% &aDescription supprimée avec succès pour le warp &d%warp_display%"
@@ -108,8 +106,7 @@ lang:
   dbexec-successful: "%prefix% &aSuccessfully updated &d%count%&a rows. &aPlease execute &d/%cmd% reload&a to update changes."
   removed-rating: "%prefix% &aSuccessfully removed rating for &d%warp_display%&a!"
   warp-info: "%prefix% &bWarp Information for &d%warp_display%&b:\n%prefix% &bOwner: &d%owner%\n%prefix% &bLocation: &d%world%, %location%\n%prefix% &bVisits: &d%visits%\n%prefix% &bDescription:\n%prefix% &d%desc%\n%prefix% &bTime Created: &d%date%\n%prefix% &bCategory: &d%category%\n%prefix% &bRates: &d%rates%\n%prefix% &bRates Average: &d%rates_average% &7(&e%rates_stars%&7)\n%prefix% &bTeleport Cost: &d%cost%"
-  refunded-items: "%prefix% &aYou have been refunded your items."
-  refunded-money: "%prefix% &aYou have been refunded your money."
+  refunded-currency: "%prefix% &aYou have been refunded."
   
   # Le menu d'aide pour les joueurs
   # La viariable %cmd% est l'alias utilisé par le joueur :)
@@ -195,11 +192,8 @@ lang:
     money-not-enough-teleport: "%prefix% &cVous n'avez pas %price% pour vous téléporter à ce warp !"
     money-not-enough-reset: "%prefix% &cVous n'avez pas %price% pour re-localiser ce warp !"
     money-not-enough-rename: "%prefix% &cVous n'avez pas %price% pour renommer ce warp !"
-    items-not-enough-set: "%prefix% &cVous n'avez pas assez de diamands pour créer ce warp !"
-    items-not-enough-teleport: "%prefix% &cVous n'avez pas assez de diamands pour créer ce warp !"
     money-not-enough-set: "%prefix% &cVous n'avez pas %price% pour créer ce warp !"
     money-not-enough-sponsor: "%prefix% &cVous n'avez pas %price% pour sponsoriser ce warp !"
-    item-not-enough-sponsor: "%prefix% &cVous n'avez pas assez de %item% pour sponsoriser ce warp !"
     moved-while-teleporting: "%prefix% &cTéléportation annulée, vous avez bougé !"
     desc-no-desc-gui: "&cAucune"
     desc-no-desc: "%prefix% &c%warp_display% n'a pas de description !"

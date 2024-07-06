@@ -39,9 +39,7 @@ lang:
   warp-remove-confirmation: "%prefix% &a你确定你要删除地标 %warp_display% 吗? 重新输入命令来确认本次操作."
   warp-set: "%prefix% &a成功创建了名为 &d%name%&a 的地标!"
   reloaded: "%prefix% &a成功重载了所有配置文件!"
-  money-taken: "%prefix% &a$%price% 已从你的账户中支出."
-  items-taken-set: "%prefix% &a钻石已从你的背包中扣除."
-  items-taken-teleport: "%prefix% &a钻石已从你的背包中扣除."
+  currency-taken: "%prefix% &a%price% 已从你的账户中支出."
   teleporting-dont-move: "%prefix% &a将在 &d%time%&a 秒内传送至地标 &d%warp_display%&a!"
   desc-set-success: "%prefix% &a成功为地标 &d%warp_display%&a 设置了描述 &d%desc%&a."
   desc-remove-success: "%prefix% &a成功清除了地标 &d%warp_display% &a的描述."
@@ -107,8 +105,7 @@ lang:
   dbexec-successful: "%prefix% &a成功更新了 &d%count%&a 行数据. &a请执行命令 &d/%cmd% reload&a 来确认更新."
   removed-rating: "%prefix% &a成功撤销了对地标 &d%warp_display%&a 的评分!"
   warp-info: "%prefix% &b&d%warp_display%&b 的相关信息:\n%prefix% &b拥有者: &d%owner%\n%prefix% &b位置: &d%world%, %location%\n%prefix% &b访问量: &d%visits%\n%prefix% &b描述:\n%prefix% &d%desc%\n%prefix% &b创建时间: &d%date%\n%prefix% &b所属分类: &d%category%\n%prefix% &b地标评分: &d%rates%\n%prefix% &b平均评分: &d%rates_average% &7(&e%rates_stars%&7)\n%prefix% &b传送价格: &d%cost%"
-  refunded-items: "%prefix% &a你的物品已退还."
-  refunded-money: "%prefix% &a你的钱款已退还."
+  refunded-currency: "%prefix% &aYou have been refunded."
  
   # 普通玩家视角的帮助菜单
   # 内建变量 %cmd% 会返回 config.yml 中的命令 :)
@@ -195,11 +192,8 @@ lang:
     money-not-enough-teleport: "%prefix% &c你缺少传送至该地标的费用 $%price%!"
     money-not-enough-reset: "%prefix% &c你缺少重设该地标的费用 $%price%!"
     money-not-enough-rename: "%prefix% &c你缺少重命名该地标的费用 $%price%!"
-    items-not-enough-set: "%prefix% &c你没有足够的钻石设置该地标!"
-    items-not-enough-teleport: "%prefix% &c你没有足够的钻石传送至该地标!"
     money-not-enough-set: "%prefix% &c你缺少设置该地标的费用 $%price%!"
     money-not-enough-sponsor: "%prefix% &c你缺少赞助该地标的费用 $%price%!"
-    item-not-enough-sponsor: "%prefix% &c你缺少足够的 %item% 赞助该地标!"
     moved-while-teleporting: "%prefix% &c传送请求已取消, 请不要移动!"
     desc-no-desc-gui: "&c无"
     desc-no-desc: "%prefix% &a地标 &c%warp_display% 没有设置描述!"

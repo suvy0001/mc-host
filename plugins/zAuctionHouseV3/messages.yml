@@ -119,6 +119,8 @@ messages:
       message: View your history
     transaction:
       message: View a player's transactions.
+    price:
+      message: Display item average price
   'no':
     holding:
       item:
@@ -287,6 +289,11 @@ messages:
         message: '&cYou can''t buy this item.'
       money:
         message: '&cYou don’t have enough money to buy this.'
+    remove:
+      error:
+        message: '&cYou can''t remove this item.'
+      full:
+        message: '&cYou must have empty slot in your inventory to retrieve the item.'
   broadcast:
     sell:
       annonce:
@@ -401,3 +408,9 @@ messages:
     infodiscord:
       message: The player **%player%** has just put on sale and removed 3 items in
         less than 60 seconds !
+  both:
+    message: both
+  purchase:
+    message: purchase
+  sale:
+    message: sale

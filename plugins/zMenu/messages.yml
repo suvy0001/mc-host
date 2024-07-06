@@ -129,6 +129,10 @@ messages:
           message: Clear all player's data
         player:
           message: Clear player's data
+      add:
+        message: Add a number to a value, works only for numbers.
+      subtract:
+        message: Subtract a number to a value, works only for numbers.
     create:
       message: Create a new config file
     inventories:
@@ -183,6 +187,10 @@ messages:
           message: '&aYou have just deleted the &f%key% &for the &b%player%&a.'
         error:
           message: '&cCannot find the key &f%key%&c.'
+      add:
+        message: '&aYou have just added a data for the &b%player% &a with the &f%key%&a.'
+      subtract:
+        message: '&aYou have just subtract a data for the &b%player% &a with the &f%key%&a.'
   website:
     login:
       error:
@@ -224,6 +232,16 @@ messages:
         message: '&cYou have just deleted the link to the site.'
       error:
         message: '&cYou are not connected to the site.'
+    download:
+      error:
+        type:
+          message: '&cThe link is not a yml file.'
+        name:
+          message: '&cCannot find file name.'
+        console:
+          message: '&cAn error has occurred, look at the console.'
+      start:
+        message: '&7Start downloading inventory, please wait.'
   placeholder:
     never:
       message: never
